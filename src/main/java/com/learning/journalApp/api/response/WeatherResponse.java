@@ -13,10 +13,10 @@ public class WeatherResponse {
     @Getter
     @Setter
     public class Current {
-        @JsonProperty("temp_c")
-        private double tempC;
-        @JsonProperty("feelslike_c")
-        private double feelsLike;
+        @JsonProperty("temperature")
+        private int temperature;
+        @JsonProperty("feelslike")
+        private int feelsLike;
     }
 }
 

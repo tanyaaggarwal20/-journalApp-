@@ -26,17 +26,14 @@ import java.util.Optional;
 
 //    private static final Logger logger = LoggerFactory.getLogger(UserService.class); //use annotation @slf4j
 
-    public boolean saveNewUser(User user) {
-        try {
+    public void saveNewUser(User user) throws Exception {
+        try{
             user.setPassword(passwordEncoder.encode(user.getPassword()));
             user.setRoles(Arrays.asList("USER"));
             userRepository.save(user);
-            return true;
         } catch (Exception e) {
-//            log.error("Error occurred for {} :", user.getUserName(), e);
-            log.error("hahahaha");
-            log.info("hahahhaha");
-            return false;
+            log.error("Failed to save new user", e);
+            throw new Exception(e);
         }
 
     }

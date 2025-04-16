@@ -1,6 +1,7 @@
 package com.learning.journalApp.controller;
 
 import com.learning.journalApp.api.response.WeatherResponse;
+import com.learning.journalApp.cache.AppCache;
 import com.learning.journalApp.entity.User;
 import com.learning.journalApp.repository.UserRepository;
 import com.learning.journalApp.service.UserService;
@@ -26,15 +27,25 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private AppCache appCache;
+
     @PutMapping
     public ResponseEntity<?> updateUser(@RequestBody User user) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String userName = authentication.getName();
-        User userInDb = userService.findByUserName(userName);
-        userInDb.setUserName(user.getUserName());
-        userInDb.setPassword(user.getPassword());
-        userService.saveNewUser(userInDb);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        try {
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            String userName = authentication.getName();
+            User userInDb = userService.findByUserName(userName);
+            userInDb.setUserName(user.getUserName());
+            userInDb.setPassword(user.getPassword());
+            userService.saveNewUser(userInDb);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return ResponseEntity
+                    .status(HttpStatus.BAD_REQUEST)
+                    .body("Failed to update user: " + e.getMessage());
+        }
+
      }
 
     @DeleteMapping
@@ -46,12 +57,16 @@ public class UserController {
     @GetMapping
     public ResponseEntity<?> greetings() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-//        log.info("hi " + authentication.getName());
         WeatherResponse weatherResponse = weatherService.getWeather("Mumbai");
         String greeting = "";
         if(weatherResponse != null) {
              greeting = ", weather in Mumbai, India feels like " + weatherResponse.getCurrent().getFeelsLike();
         }
         return new ResponseEntity<>("Hi " + authentication.getName() + greeting, HttpStatus.OK);
+    }
+
+    @GetMapping("/clear-app-cache")
+    public void clearAppCache() {
+        appCache.init();
     }
 }
