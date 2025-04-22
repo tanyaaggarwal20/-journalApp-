@@ -1,4 +1,4 @@
-package com.learning.journalapp.model;
+package com.learning.journalApp.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

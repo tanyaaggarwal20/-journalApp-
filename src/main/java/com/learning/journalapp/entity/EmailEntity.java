@@ -1,4 +1,4 @@
-package com.learning.journalapp.entity;
+package com.learning.journalApp.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.learning.journalapp.dto;
+package com.learning.journalApp.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;

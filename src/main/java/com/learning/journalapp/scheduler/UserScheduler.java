@@ -1,12 +1,12 @@
-package com.learning.journalapp.scheduler;
+package com.learning.journalApp.scheduler;
 
-import com.learning.journalapp.cache.AppCache;
-import com.learning.journalapp.entity.JournalEntry;
-import com.learning.journalapp.model.SentimentData;
-import com.learning.journalapp.entity.User;
-import com.learning.journalapp.enums.Sentiment;
-import com.learning.journalapp.repository.UserRepositoryImpl;
-import com.learning.journalapp.service.EmailService;
+import com.learning.journalApp.cache.AppCache;
+import com.learning.journalApp.entity.JournalEntry;
+import com.learning.journalApp.model.SentimentData;
+import com.learning.journalApp.entity.User;
+import com.learning.journalApp.enums.Sentiment;
+import com.learning.journalApp.repository.UserRepositoryImpl;
+import com.learning.journalApp.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;

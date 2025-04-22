@@ -1,7 +1,7 @@
-package com.learning.journalapp.cache;
+package com.learning.journalApp.cache;
 
-import com.learning.journalapp.entity.ConfigJournalAppEntity;
-import com.learning.journalapp.repository.ConfigJournalAppRepository;
+import com.learning.journalApp.entity.ConfigJournalAppEntity;
+import com.learning.journalApp.repository.ConfigJournalAppRepository;
 import jakarta.annotation.PostConstruct;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;

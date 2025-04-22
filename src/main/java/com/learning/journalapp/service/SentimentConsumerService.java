@@ -1,6 +1,6 @@
-package com.learning.journalapp.service;
+package com.learning.journalApp.service;
 
-import com.learning.journalapp.model.SentimentData;
+import com.learning.journalApp.model.SentimentData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;

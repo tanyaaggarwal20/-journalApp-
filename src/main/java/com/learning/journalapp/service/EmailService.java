@@ -1,4 +1,4 @@
-package com.learning.journalapp.service;
+package com.learning.journalApp.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

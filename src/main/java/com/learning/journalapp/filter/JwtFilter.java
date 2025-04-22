@@ -1,6 +1,6 @@
-package com.learning.journalapp.filter;
+package com.learning.journalApp.filter;
 
-import com.learning.journalapp.utils.JwtUtil;
+import com.learning.journalApp.utils.JwtUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

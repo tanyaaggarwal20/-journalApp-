@@ -1,7 +1,7 @@
-package com.learning.journalapp.service;
+package com.learning.journalApp.service;
 
-import com.learning.journalapp.entity.User;
-import com.learning.journalapp.repository.UserRepository;
+import com.learning.journalApp.entity.User;
+import com.learning.journalApp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

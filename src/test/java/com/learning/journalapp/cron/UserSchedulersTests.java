@@ -1,6 +1,6 @@
-package com.learning.journalapp.cron;
+package com.learning.journalApp.cron;
 
-import com.learning.journalapp.scheduler.UserScheduler;
+import com.learning.journalApp.scheduler.UserScheduler;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

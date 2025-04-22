@@ -1,11 +1,11 @@
-package com.learning.journalapp.controller;
+package com.learning.journalApp.controller;
 
-import com.learning.journalapp.api.response.WeatherResponse;
-import com.learning.journalapp.cache.AppCache;
-import com.learning.journalapp.entity.User;
-import com.learning.journalapp.repository.UserRepository;
-import com.learning.journalapp.service.UserService;
-import com.learning.journalapp.service.WeatherService;
+import com.learning.journalApp.api.response.WeatherResponse;
+import com.learning.journalApp.cache.AppCache;
+import com.learning.journalApp.entity.User;
+import com.learning.journalApp.repository.UserRepository;
+import com.learning.journalApp.service.UserService;
+import com.learning.journalApp.service.WeatherService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;

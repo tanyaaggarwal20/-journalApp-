@@ -1,7 +1,7 @@
-package com.learning.journalapp.controller;
+package com.learning.journalApp.controller;
 
-import com.learning.journalapp.entity.User;
-import com.learning.journalapp.service.UserService;
+import com.learning.journalApp.entity.User;
+import com.learning.journalApp.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;

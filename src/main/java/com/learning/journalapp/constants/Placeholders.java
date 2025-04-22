@@ -1,4 +1,4 @@
-package com.learning.journalapp.constants;
+package com.learning.journalApp.constants;
 
 public final class Placeholders {
     private Placeholders() {}

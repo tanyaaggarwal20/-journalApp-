@@ -1,6 +1,6 @@
-package com.learning.journalapp.repository;
+package com.learning.journalApp.repository;
 
-import com.learning.journalapp.entity.User;
+import com.learning.journalApp.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
