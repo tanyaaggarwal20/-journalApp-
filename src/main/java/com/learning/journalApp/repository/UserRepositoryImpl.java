@@ -12,12 +12,8 @@ import java.util.List;
 @Component
 public class UserRepositoryImpl {
 
-    private final MongoTemplate mongoTemplate;
-
     @Autowired
-    public UserRepositoryImpl(MongoTemplate mongoTemplate) {
-        this.mongoTemplate = mongoTemplate;
-    }
+    private MongoTemplate mongoTemplate;
 
     public List<User> getUsersForSA(){
         Query query = new Query();

@@ -1,7 +1,6 @@
 package com.learning.journalApp.entity;
 
 import com.learning.journalApp.enums.Sentiment;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -15,7 +14,7 @@ import java.time.LocalDateTime;
 public class JournalEntry {
     @Id
     private ObjectId id;
-    @NotNull
+    @NonNull
     private String title;
     private String content;
     private LocalDateTime date;

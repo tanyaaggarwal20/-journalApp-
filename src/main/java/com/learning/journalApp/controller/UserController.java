@@ -6,8 +6,6 @@ import com.learning.journalApp.entity.User;
 import com.learning.journalApp.repository.UserRepository;
 import com.learning.journalApp.service.UserService;
 import com.learning.journalApp.service.WeatherService;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,25 +17,21 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/user")
 @Slf4j
-@Tag(name = "User APIs", description = "APIs for user management")
 public class UserController {
 
-    private final UserService userService;
-    private final WeatherService weatherService;
-    private final UserRepository userRepository;
-    private final AppCache appCache;
+    @Autowired
+    private UserService userService;
 
     @Autowired
-    public UserController(UserService userService, WeatherService weatherService, UserRepository userRepository, AppCache appCache) {
-        this.userService = userService;
-        this.weatherService = weatherService;
-        this.userRepository = userRepository;
-        this.appCache = appCache;
-    }
+    private WeatherService weatherService;
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private AppCache appCache;
 
     @PutMapping
-    @Operation(summary = "Update username and password of the authenticated user")
-    public ResponseEntity<String> updateUser(@RequestBody User user) {
+    public ResponseEntity<?> updateUser(@RequestBody User user) {
         try {
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
             String userName = authentication.getName();
@@ -55,15 +49,13 @@ public class UserController {
      }
 
     @DeleteMapping
-    @Operation(summary = "Delete the authenticated user")
-    public ResponseEntity<Void> deleteUser() {
+    public ResponseEntity<?> deleteUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         userRepository.deleteByUserName(authentication.getName());
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
     @GetMapping
-    @Operation(summary = "Greetings to the authenticated user")
-    public ResponseEntity<String> greetings() {
+    public ResponseEntity<?> greetings() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         WeatherResponse weatherResponse = weatherService.getWeather("Mumbai");
         String greeting = "";
@@ -74,7 +66,6 @@ public class UserController {
     }
 
     @GetMapping("/clear-app-cache")
-    @Operation(summary = "Clear the application cache")
     public void clearAppCache() {
         appCache.init();
     }

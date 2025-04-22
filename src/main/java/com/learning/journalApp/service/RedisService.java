@@ -12,12 +12,8 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class RedisService {
 
-    private final RedisTemplate<String, String> redisTemplate;
-
     @Autowired
-    public RedisService(RedisTemplate<String, String> redisTemplate) {
-        this.redisTemplate = redisTemplate;
-    }
+    private RedisTemplate<String, String> redisTemplate;
 
     public <T> T get(String key, Class<T> entityClass) {
         try {
