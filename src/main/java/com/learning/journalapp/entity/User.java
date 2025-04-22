@@ -1,4 +1,4 @@
-package com.learning.journalApp.entity;
+package com.learning.journalapp.entity;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.*;

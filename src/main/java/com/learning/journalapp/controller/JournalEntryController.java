@@ -1,9 +1,9 @@
-package com.learning.journalApp.controller;
+package com.learning.journalapp.controller;
 
-import com.learning.journalApp.entity.JournalEntry;
-import com.learning.journalApp.entity.User;
-import com.learning.journalApp.service.JournalEntryService;
-import com.learning.journalApp.service.UserService;
+import com.learning.journalapp.entity.JournalEntry;
+import com.learning.journalapp.entity.User;
+import com.learning.journalapp.service.JournalEntryService;
+import com.learning.journalapp.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.bson.types.ObjectId;
@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 
 @RestController

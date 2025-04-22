@@ -1,7 +1,7 @@
-package com.learning.journalApp.controller;
+package com.learning.journalapp.controller;
 
-import com.learning.journalApp.entity.EmailEntity;
-import com.learning.journalApp.service.EmailService;
+import com.learning.journalapp.entity.EmailEntity;
+import com.learning.journalapp.service.EmailService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;

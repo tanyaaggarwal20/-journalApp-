@@ -1,4 +1,4 @@
-package com.learning.journalApp.service;
+package com.learning.journalapp.service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

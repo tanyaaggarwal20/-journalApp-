@@ -1,4 +1,4 @@
-package com.learning.journalApp.service;
+package com.learning.journalapp.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;

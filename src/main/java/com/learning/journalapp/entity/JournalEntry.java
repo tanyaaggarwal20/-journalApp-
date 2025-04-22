@@ -1,6 +1,6 @@
-package com.learning.journalApp.entity;
+package com.learning.journalapp.entity;
 
-import com.learning.journalApp.enums.Sentiment;
+import com.learning.journalapp.enums.Sentiment;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.bson.types.ObjectId;

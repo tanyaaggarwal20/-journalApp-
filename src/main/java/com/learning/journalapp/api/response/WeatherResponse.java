@@ -1,4 +1,4 @@
-package com.learning.journalApp.api.response;
+package com.learning.journalapp.api.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;

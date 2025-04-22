@@ -1,7 +1,7 @@
-package com.learning.journalApp.config;
+package com.learning.journalapp.config;
 
-import com.learning.journalApp.filter.JwtFilter;
-import com.learning.journalApp.service.UserDetailsServiceImpl;
+import com.learning.journalapp.filter.JwtFilter;
+import com.learning.journalapp.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

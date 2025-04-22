@@ -1,8 +1,8 @@
-package com.learning.journalApp.service;
+package com.learning.journalapp.service;
 
-import com.learning.journalApp.api.response.WeatherResponse;
-import com.learning.journalApp.cache.AppCache;
-import com.learning.journalApp.constants.Placeholders;
+import com.learning.journalapp.api.response.WeatherResponse;
+import com.learning.journalapp.cache.AppCache;
+import com.learning.journalapp.constants.Placeholders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;

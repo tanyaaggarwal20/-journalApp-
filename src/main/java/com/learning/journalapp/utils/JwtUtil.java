@@ -1,4 +1,4 @@
-package com.learning.journalApp.utils;
+package com.learning.journalapp.utils;
 
 import org.springframework.stereotype.Component;
 import io.jsonwebtoken.Claims;

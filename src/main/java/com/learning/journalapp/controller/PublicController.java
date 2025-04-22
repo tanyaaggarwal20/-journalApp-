@@ -1,10 +1,10 @@
-package com.learning.journalApp.controller;
+package com.learning.journalapp.controller;
 
-import com.learning.journalApp.dto.UserDTO;
-import com.learning.journalApp.entity.User;
-import com.learning.journalApp.service.UserDetailsServiceImpl;
-import com.learning.journalApp.service.UserService;
-import com.learning.journalApp.utils.JwtUtil;
+import com.learning.journalapp.dto.UserDTO;
+import com.learning.journalapp.entity.User;
+import com.learning.journalapp.service.UserDetailsServiceImpl;
+import com.learning.journalapp.service.UserService;
+import com.learning.journalapp.utils.JwtUtil;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;

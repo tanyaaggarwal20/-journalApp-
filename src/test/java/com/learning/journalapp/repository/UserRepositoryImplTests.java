@@ -1,4 +1,4 @@
-package com.learning.journalApp.repository;
+package com.learning.journalapp.repository;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

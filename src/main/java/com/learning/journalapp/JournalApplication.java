@@ -1,4 +1,4 @@
-package com.learning.journalApp;
+package com.learning.journalapp;
 
 import org.springframework.boot.SpringApplication;
 

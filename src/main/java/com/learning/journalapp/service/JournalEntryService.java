@@ -1,12 +1,11 @@
-package   com.learning.journalApp.service;
+package   com.learning.journalapp.service;
 
-import com.learning.journalApp.entity.JournalEntry;
-import com.learning.journalApp.entity.User;
-import com.learning.journalApp.repository.JournalEntryRepository;
+import com.learning.journalapp.entity.JournalEntry;
+import com.learning.journalapp.entity.User;
+import com.learning.journalapp.repository.JournalEntryRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

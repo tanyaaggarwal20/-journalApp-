@@ -1,4 +1,4 @@
-package com.learning.journalApp.config;
+package com.learning.journalapp.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

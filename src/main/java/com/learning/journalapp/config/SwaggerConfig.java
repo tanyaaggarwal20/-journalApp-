@@ -1,4 +1,4 @@
-package com.learning.journalApp.config;
+package com.learning.journalapp.config;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
