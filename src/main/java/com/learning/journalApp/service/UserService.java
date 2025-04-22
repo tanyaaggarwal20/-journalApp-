@@ -4,8 +4,6 @@ import com.learning.journalApp.entity.User;
 import com.learning.journalApp.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -19,8 +17,12 @@ import java.util.Optional;
 @Slf4j
  public class UserService {
 
+    private final UserRepository userRepository;
+
     @Autowired
-    private UserRepository userRepository;
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     private static final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(); //doubt
 
@@ -29,7 +31,7 @@ import java.util.Optional;
     public void saveNewUser(User user) throws Exception {
         try{
             user.setPassword(passwordEncoder.encode(user.getPassword()));
-            user.setRoles(Arrays.asList("USER"));
+            user.setRoles(List.of("USER"));
             userRepository.save(user);
         } catch (Exception e) {
             log.error("Failed to save new user", e);
@@ -40,7 +42,7 @@ import java.util.Optional;
 
     public void saveAdmin(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setRoles(Arrays.asList("USER", "ADMIN"));
+        user.setRoles(List.of("USER", "ADMIN"));
         userRepository.save(user);
     }
 

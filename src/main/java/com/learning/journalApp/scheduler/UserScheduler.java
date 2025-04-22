@@ -22,17 +22,18 @@ import java.util.stream.Collectors;
 @Component
 public class UserScheduler  {
 
-    @Autowired
-    private EmailService emailService;
+    private final EmailService emailService;
+    private final UserRepositoryImpl userRepository;
+    private final AppCache appCache;
+    private final KafkaTemplate<String, SentimentData> kafkaTemplate;
 
     @Autowired
-    private UserRepositoryImpl userRepository;
-
-    @Autowired
-    private AppCache appCache;
-
-    @Autowired
-    private KafkaTemplate<String, SentimentData> kafkaTemplate;
+    public UserScheduler(EmailService emailService, UserRepositoryImpl userRepository, AppCache appCache, KafkaTemplate<String, SentimentData> kafkaTemplate) {
+        this.emailService = emailService;
+        this.userRepository = userRepository;
+        this.appCache = appCache;
+        this.kafkaTemplate = kafkaTemplate;
+    }
 
     @Scheduled(cron = "0 0 9 * * SUN")
     public void fetchUsersAndSendSaMail() {

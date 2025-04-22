@@ -1,6 +1,8 @@
 package com.learning.journalApp.constants;
 
-public interface Placeholders  {
-    String API_KEY = "<apiKey>";
-    String CITY = "<city>";
+public final class Placeholders {
+    private Placeholders() {}
+
+    public static final String API_KEY = "<apiKey>";
+    public static final String CITY = "<city>";
 }

@@ -9,11 +9,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class SentimentConsumerService {
 
-    @Autowired
-    private EmailService emailService;
+    private final EmailService emailService;
 
     @Autowired
-    private KafkaTemplate<String, SentimentData> kafkaTemplate;
+    public SentimentConsumerService(EmailService emailService, KafkaTemplate<String, SentimentData> kafkaTemplate) {
+        this.emailService = emailService;
+    }
 
     @KafkaListener(topics = "weekly_sentiments", groupId = "weekly_sentiment_group")
     public void consume(SentimentData sentimentData) {

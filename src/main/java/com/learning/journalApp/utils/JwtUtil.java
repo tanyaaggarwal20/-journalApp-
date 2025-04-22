@@ -56,7 +56,7 @@ public class JwtUtil {
                 .compact();
     }
 
-    public Boolean  validateToken(String token) {
+    public Boolean validateToken(String token) {
         return !isTokenExpired(token);
     }
 }
