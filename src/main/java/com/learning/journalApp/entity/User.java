@@ -1,5 +1,6 @@
 package com.learning.journalApp.entity;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -19,9 +20,9 @@ public class User {
     @Id
     private ObjectId id;
     @Indexed(unique = true)
-    @NonNull
+    @NotNull
     private String userName;
-    @NonNull
+    @NotNull
     private String password;
     @DBRef
     private List<JournalEntry> journalEntries = new ArrayList<>();

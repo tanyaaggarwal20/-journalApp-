@@ -15,11 +15,15 @@ import java.util.Map;
 @Data
 public class AppCache {
     public enum keys{
-        WEATHER_API;
+        WEATHER_API
     }
 
+    private final ConfigJournalAppRepository configJournalAppRepository;
+
     @Autowired
-    private ConfigJournalAppRepository configJournalAppRepository;
+    public AppCache(ConfigJournalAppRepository configJournalAppRepository) {
+        this.configJournalAppRepository = configJournalAppRepository;
+    }
 
     private Map<String, String> appCache;
 

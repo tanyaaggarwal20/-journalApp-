@@ -15,14 +15,16 @@ public class WeatherService {
     @Value("${weather.api.key}")
     private String apiKey;
 
-    @Autowired
-    private AppCache appCache;
-    
-    @Autowired
-    private RestTemplate restTemplate;
+    private final AppCache appCache;
+    private final RestTemplate restTemplate;
+    private final RedisService redisService;
 
     @Autowired
-    private RedisService redisService;
+    public WeatherService(AppCache appCache, RestTemplate restTemplate, RedisService redisService) {
+        this.appCache = appCache;
+        this.restTemplate = restTemplate;
+        this.redisService = redisService;
+    }
 
     public WeatherResponse getWeather(String city){
         WeatherResponse weatherResponse = redisService.get("weather_of_" + city, WeatherResponse.class);
